@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cancer Research Interactive Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🔬 Cancer Research Interactive Dashboard</h1>
+    <button id="modeToggle">Switch to Tumor Mode</button>
+  </header>
+
+  <!-- Part 1: Event Interaction -->
+  <section>
+    <h2>Cell Interaction</h2>
+    <p>Hover over the cell to reveal its type:</p>
+    <img src="https://via.placeholder.com/150" alt="cell" id="cellImage" />
+    <p id="cellStatus"></p>
+  </section>
+
+  <!-- Part 2: Interactive Elements -->
+  <section>
+    <h2>Cell Division Simulation</h2>
+    <button id="divideBtn">Divide Cell</button>
+    <p>Division Count: <span id="divisionCount">0</span></p>
+  </section>
+
+  <section>
+    <h2>Therapy Response</h2>
+    <label for="therapySelect">Choose a therapy:</label>
+    <select id="therapySelect">
+      <option value="">-- Select --</option>
+      <option value="chemo">Chemotherapy</option>
+      <option value="immuno">Immunotherapy</option>
+      <option value="targeted">Targeted Therapy</option>
+    </select>
+    <p id="therapyInfo"></p>
+  </section>
+
+  <!-- Part 3: Research Data Entry Form -->
+  <section>
+    <h2>Research Data Entry Form</h2>
+    <form id="researchForm">
+      <label>Name: <input type="text" id="name" /></label>
+      <small class="error" id="nameError"></small><br />
+
+      <label>Email: <input type="text" id="email" /></label>
+      <small class="error" id="emailError"></small><br />
+
+      <label>Phone: <input type="text" id="phone" /></label>
+      <small class="error" id="phoneError"></small><br />
+
+      <label>Biomarker Code: <input type="text" id="biomarker" /></label>
+      <small class="error" id="biomarkerError"></small><br />
+
+      <button type="submit">Submit Data</button>
+    </form>
+    <p id="formSuccess"></p>
+  </section>
+    <!-- Cancer Facts Generator -->
+  <section>
+    <h2>Cancer Facts Generator</h2>
+    <button id="factBtn">Show Random Fact</button>
+    <p id="factDisplay"></p>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
